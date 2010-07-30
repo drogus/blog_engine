@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem "rails", "3.0.0.rc"
+gem "rails", :path => ENV["RAILS_SOURCE"]
 gem "capybara", ">= 0.3.9"
 gem "sqlite3-ruby", :require => "sqlite3"
 
