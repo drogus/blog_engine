@@ -1,4 +1,6 @@
 Blog::Engine.routes.draw do
-  resources :posts, :controller => "blog/posts"
-  root :to => "blog/posts#index"
+  namespace :blog, :path => '', :as => '' do
+    resources :posts, :controller => "posts"
+    root :to => "posts#index"
+  end
 end
