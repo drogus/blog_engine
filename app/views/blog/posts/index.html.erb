@@ -1,0 +1,12 @@
+<div id="posts">
+  <% @posts.each do |post| %>
+    <div id="<%= dom_id(post) %>">
+      <h2><%= post.title %></h2>
+      <div class="body">
+        <%= post.body %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Add new post", new_post_path %>

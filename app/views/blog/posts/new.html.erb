@@ -1,0 +1,15 @@
+<h1>Blog::Engine new</h1>
+
+<%= form_for(@post, :url => posts_path) do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

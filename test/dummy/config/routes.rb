@@ -1,4 +1,6 @@
 Dummy::Application.routes.draw do
+  mount Blog::Engine => "/blog", :as => "blog"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
