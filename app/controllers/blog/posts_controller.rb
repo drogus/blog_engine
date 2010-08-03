@@ -10,14 +10,14 @@ module Blog
       @posts = Post.all
     end
 
-    def create
-      @post = Post.new(params[:blog_post])
+    def show
+      @post = Post.find(params[:id])
+    end
 
-      if @post.save
-        redirect_to posts_path
-      else
-        render :new
-      end
+    def create
+      @post = Post.create(params[:blog_post])
+
+      respond_with(@post)
     end
   end
 end
