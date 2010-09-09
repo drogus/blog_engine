@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
-gem "rails", :path => ENV["RAILS_SOURCE"]
+gem "rails", :path => "git://github.com/drogus/rails.git", :branch => "engines"
+gem "arel", :git => "git://github.com/rails/arel.git"
 gem "capybara", ">= 0.3.9"
 gem "sqlite3-ruby", :require => "sqlite3"
 
