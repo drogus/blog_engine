@@ -15,7 +15,7 @@ module Blog
     end
 
     def create
-      @post = Post.create(params[:blog_post])
+      @post = Post.create(params[:post])
 
       respond_with(@post)
     end
