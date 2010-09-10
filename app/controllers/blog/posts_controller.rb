@@ -1,5 +1,5 @@
 module Blog
-  class PostsController < ActionController::Base
+  class PostsController < ApplicationController
     respond_to :html
 
     def new
