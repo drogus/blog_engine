@@ -17,11 +17,8 @@ Capybara.default_driver   = :rack_test
 Capybara.default_selector = :css
 
 # Run any available migration
-# A bit of hacks, find a nicer way
-FileUtils.rm(Dir[File.expand_path("../dummy/db/test.sqlite3", __FILE__)])
-FileUtils.rm(Dir[File.expand_path("../dummy/db/migrate/*.blog.rb", __FILE__)])
-ActiveRecord::Migration.copy File.expand_path("../dummy/db/migrate/", __FILE__), { :blog => File.expand_path("../../db/migrate/", __FILE__) }
 ActiveRecord::Migrator.migrate File.expand_path("../dummy/db/migrate/", __FILE__)
+ActiveRecord::Migrator.migrate File.expand_path("../../db/migrate/", __FILE__)
 
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
