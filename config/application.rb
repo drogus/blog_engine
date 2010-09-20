@@ -1,7 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 $:.unshift File.expand_path('../../lib', __FILE__)
 
-require "action_controller/railtie"
+require 'rails/all'
 
 Bundler.require
 require 'blog'
@@ -16,5 +16,9 @@ module Blog
       g.test_framework  :rspec, :fixture => false
     end
 
+    config.secret_token = "adcjh9jh9fcnuscn9uqnc9qun9cnq9nc9qnew9q7ncewq"
   end
 end
+
+# little hack for routes and other parts using Blog::Engine
+Blog::Engine = Blog::Application
