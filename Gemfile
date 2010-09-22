@@ -1,7 +1,7 @@
 source "http://rubygems.org"
 
-gem "rails", :git => "http://github.com/rails/rails.git"
-gem "arel", :git => "http://github.com/rails/arel.git"
+gem "rails", :git => "git://github.com/rails/rails.git"
+gem "arel", :git => "git://github.com/rails/arel.git"
 
 gem "factory_girl"
 gem "capybara", ">= 0.3.9"
