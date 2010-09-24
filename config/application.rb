@@ -17,8 +17,10 @@ module Blog
     end
 
     config.secret_token = "adcjh9jh9fcnuscn9uqnc9qun9cnq9nc9qnew9q7ncewq"
+
+    routes.draw do
+      mount Blog::Engine => '/'
+    end
   end
 end
 
-# little hack for routes and other parts using Blog::Engine
-Blog::Engine = Blog::Application
