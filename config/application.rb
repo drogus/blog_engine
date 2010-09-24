@@ -10,17 +10,15 @@ module Blog
   class Application < Rails::Application
     namespace Blog
 
-    config.generators do |g|
-      g.orm             :datamapper
-      g.template_engine :haml
-      g.test_framework  :rspec, :fixture => false
-    end
-
     config.secret_token = "adcjh9jh9fcnuscn9uqnc9qun9cnq9nc9qnew9q7ncewq"
+    config.root = "tmp"
+    config.paths.config.environment "../config/environment.rb"
+    config.paths.config.database "../config/database.yml"
+    config.paths.db "../db"
+    config.paths.db.migrate "../db/migrate"
 
-    routes.draw do
-      mount Blog::Engine => '/'
+    def routes
+      Blog::Engine.routes
     end
   end
 end
-
