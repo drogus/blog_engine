@@ -17,8 +17,8 @@ module Blog
     config.paths.db "../db"
     config.paths.db.migrate "../db/migrate"
 
-    def routes
-      Blog::Engine.routes
+    routes.draw do
+      mount Blog::Engine => "/"
     end
   end
 end
