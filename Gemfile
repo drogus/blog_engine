@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem "rails", :git => "http://github.com/rails/rails.git"
+gem "rails", :path => ENV["RAILS_SOURCE"]
 gem "arel", :git => "http://github.com/rails/arel.git"
 
 gem "factory_girl"
