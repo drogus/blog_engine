@@ -1,10 +1,5 @@
 #!/usr/bin/env ruby
 # This command will automatically be run when you run "rails" with Rails 3 gems installed from the root of your application.
 
-ENV_PATH  = File.expand_path('../../test/dummy/config/environment',  __FILE__)
-BOOT_PATH = File.expand_path('../../test/dummy/config/boot',  __FILE__)
-APP_PATH  = File.expand_path('../../test/dummy/config/application',  __FILE__)
-ENGINE_PATH = File.expand_path('../../config/engine',  __FILE__)
-
-require BOOT_PATH
-require 'rails/commands'
+ENGINE_PATH = File.expand_path('../..',  __FILE__)
+load File.expand_path('../../test/dummy/script/rails',  __FILE__)
